@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "adminDash_backend": {
+      "main": "src/adminDash_backend/main.mo",
+      "type": "motoko"
+    },
+    "adminDash_frontend": {
+      "dependencies": [
+        "adminDash_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/adminDash_frontend/src/index.html"
+      },
+      "source": [
+        "src/adminDash_frontend/assets",
+        "dist/adminDash_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
